@@ -1,0 +1,64 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Guest </h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Guest Name</label>
+            <input type="text" class="form-control" id="guestname" [(ngModel)]="guest.guestname" name="guestname">
+        </div>
+
+        <div class="form-group">
+            <label> Age</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="guest.age" name="age">
+        </div>
+
+        <div class="form-group">
+            <label> Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)]="guest.gender" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label> Noofchildren</label>
+            <input type="text" class="form-control" id="noofchildren" [(ngModel)]="guest.noofchildren"
+                name="noofchildren">
+        </div>
+
+        <div class="form-group">
+            <label>Noofadults</label>
+            <input type="text" class="form-control" id="noofadults" [(ngModel)]="guest.noofadults" name="noofadults">
+        </div>
+
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="guest.emailid" name="emailid">
+        </div>
+
+        <div class="form-group">
+            <label> Mobile No</label>
+            <input type="text" class="form-control" id="mobileno" [(ngModel)]="guest.mobileno" name="mobileno">
+        </div>
+
+        <div class="form-group">
+            <label> Country</label>
+            <input type="text" class="form-control" id="country" [(ngModel)]="guest.country" name="country">
+        </div>
+
+        <div class="form-group">
+            <label> State</label>
+            <input type="text" class="form-control" id="state" [(ngModel)]="guest.state" name="state">
+        </div>
+
+        <div class="form-group">
+            <label> City</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="guest.age" name="age">
+        </div>
+
+        <div class="form-group">
+            <label> Zipcode</label>
+            <input type="text" class="form-control" id="zipcode" [(ngModel)]="guest.zipcode" name="zipcode">
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+</div>

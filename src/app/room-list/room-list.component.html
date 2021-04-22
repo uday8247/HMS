@@ -1,0 +1,25 @@
+<h2> Room List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Roomno</th>
+            <th> Roomtype </th>
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let room of rooms">
+
+            <td> {{ room.roomno }} </td>
+            <td> {{ room.roomtype }} </td>
+            <td> {{ room.price }} </td>
+            <td> {{ room.status }} </td>
+            <td>
+                <button (click)="deleteRoom(room.roomno)" class="btn btn-danger">Delete</button>
+                <button (click)="roomDetails(room.roomno)" class="btn btn-info" style="margin-left: 10px">
+                    View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

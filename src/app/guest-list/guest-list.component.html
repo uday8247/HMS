@@ -1,0 +1,42 @@
+<h2> Guest List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Guest Name</th>
+            <th> Age </th>
+            <th> Gender </th>
+            <th> No of Children</th>
+            <th> No of Adults</th>
+            <th> Email Id</th>
+            <th> Mobile No </th>
+            <th> Country </th>
+            <th> State </th>
+            <th> City </th>
+            <th> Zipcode </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let guest of guests">
+
+            <td> {{ guest.guestname }} </td>
+            <td> {{ guest.age }} </td>
+            <td> {{ guest.gender }} </td>
+            <td> {{ guest.noofchildren }} </td>
+            <td> {{ guest.noofadults }} </td>
+            <td> {{ guest.emailid }} </td>
+            <td> {{ guest.mobileno }} </td>
+            <td> {{ guest.country }} </td>
+            <td> {{ guest.state }} </td>
+            <td> {{ guest.city }} </td>
+            <td> {{ guest.zipcode }} </td>
+            <td>
+                <button (click)="updateGuest(guest.emailid)" class="btn btn-info"> Update</button>
+                <button (click)="deleteGuest(guest.emailid)" class="btn btn-danger" style="margin-left: 10px">
+                    Delete</button>
+                <button (click)="guestDetails(guest.emailid)" class="btn btn-info" style="margin-left: 10px">
+                    View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

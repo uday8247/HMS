@@ -1,0 +1,28 @@
+<h2> Reservation List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Room No</th>
+            <th> Room Type </th>
+            <th> Check in </th>
+            <th> Check out </th>
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservation of reservations">
+
+            <td> {{ reservation.roomno }} </td>
+            <td> {{ reservation.roomtype }} </td>
+            <td> {{ reservation.checkin }} </td>
+            <td> {{ reservation.checkout }} </td>
+            <td> {{ reservation.status }} </td>
+            <td>
+
+                <button (click)="reservationDetails(reservation.roomno)" class="btn btn-info">View</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
