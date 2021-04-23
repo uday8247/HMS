@@ -8,7 +8,7 @@ import { Room } from './room';
 })
 export class RoomService {
 
-  private baseURL = "http://localhost:8078/rooms";
+  private baseURL = "http://localhost:8078/api/room/rooms";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,6 +22,10 @@ export class RoomService {
 
   getRoomById(roomno: string): Observable<Room> {
     return this.httpClient.get<Room>(`${this.baseURL}/${roomno}`);
+  }
+
+  updateRoom(roomno: string, room: Room): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}`, room);
   }
 
   deleteRoom(roomno: string): Observable<Object> {

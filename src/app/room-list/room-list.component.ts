@@ -33,6 +33,10 @@ export class RoomListComponent implements OnInit {
     this.router.navigate(['room-details', roomno]);
   }
 
+  updateRoom(roomno: string) {
+    this.router.navigate(['update-room', roomno]);
+  }
+
   deleteRoom(roomno: string) {
     this.roomService.deleteRoom(roomno).subscribe(data => {
       console.log(data);

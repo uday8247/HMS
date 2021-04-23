@@ -19,8 +19,11 @@
             <td> {{ reservation.checkout }} </td>
             <td> {{ reservation.status }} </td>
             <td>
-
-                <button (click)="reservationDetails(reservation.roomno)" class="btn btn-info">View</button>
+                <button (click)="updateBookings(reservation.roomno)" class="btn btn-info"> Update</button>
+                <button (click)="deleteReservation(reservation.roomno)" class="btn btn-danger"
+                    style="margin-left: 10px">Delete</button>
+                <button (click)="ReservationDetails(reservation.roomno)" class="btn btn-info"
+                    style="margin-left: 10px">View</button>
 
             </td>
         </tr>

@@ -14,6 +14,13 @@ import { UpdateGuestComponent } from './update-guest/update-guest.component';
 import { GuestDetailsComponent } from './guest-details/guest-details.component';
 import { LoginComponent } from './login/login.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 import { LogoutComponent } from './logout/logout.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,10 +28,13 @@ import { RouterModule } from '@angular/router';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
 import { RoomListComponent } from './room-list/room-list.component';
+import { UpdateRoomComponent } from './update-room/update-room.component';
 import { MakeReservationComponent } from './make-reservation/make-reservation.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { ReservationDetailsComponent } from './reservation-details/reservation-details.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { UpdateBookingsComponent } from './update-bookings/update-bookings.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,13 +56,22 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
     ReservationListComponent,
     ReservationDetailsComponent,
     PaymentGatewayComponent,
+    UpdateRoomComponent,
+    UpdateBookingsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

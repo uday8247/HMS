@@ -33,4 +33,14 @@ export class ReservationListComponent implements OnInit {
   ReservationDetails(roomno: string) {
     this.router.navigate(['reservation-details', roomno]);
   }
+  updateBookings(roomno: string) {
+    this.router.navigate(['update-bookings', roomno]);
+  }
+
+  deleteReservation(roomno: string) {
+    this.reservationService.deleteReservation(roomno).subscribe(data => {
+      console.log(data);
+      this.getReservations();
+    })
+  }
 }

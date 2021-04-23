@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Reservation } from './reservation';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationService {
 
-  private baseURL = "http://localhost:8081/rooms";
+  private baseURL = "http://localhost:8081/api/booking/rooms";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,6 +18,14 @@ export class ReservationService {
 
   createReservation(reservation: Reservation): Observable<Object> {
     return this.httpClient.post(`${this.baseURL}`, reservation);
+  }
+
+  updateBookings(roomno: string, reservation: Reservation): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}`, reservation);
+  }
+
+  deleteReservation(roomno: string): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${roomno}`);
   }
 
   getReservationById(roomno: string): Observable<Reservation> {

@@ -12,14 +12,14 @@ export class HeaderComponent implements OnInit {
   constructor(public loginService: AuthenticationService, private router: Router) { }
   ownerItems = [{ value: 'Guest List', route: '/guests' }, { value: 'Add Employee', route: '/create-employee' },
   { value: 'Employee List', route: '/employees' }, { value: 'Add Rooms', route: '/create-room' }, { value: 'Room List', route: '/rooms' },
-  ]
+  { value: 'Booked Rooms', route: '/reservations' }]
 
   managerItems = [{ value: 'Add Employee', route: '/create-employee' },
   { value: 'Employee List', route: '/employees' }, { value: 'Add Rooms', route: '/create-room' }, { value: 'Room List', route: '/rooms' },
-  { value: 'Guest List', route: '/guests' }]
+  { value: 'Guest List', route: '/guests' }, { value: 'Booked Rooms', route: '/reservations' }]
 
   receptionistItems = [{ value: 'Add Guest', route: '/create-guest' }, { value: 'Guest List', route: '/guests' },
-  { value: 'Room List', route: '/rooms' }]
+  { value: 'Room List', route: '/rooms' }, { value: 'Booked Rooms', route: '/reservations' }]
   routesToShow = [];
   ngOnInit() {
     if (sessionStorage.getItem('username') === "Receptionist") {

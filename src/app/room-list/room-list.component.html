@@ -4,6 +4,7 @@
         <tr>
             <th> Roomno</th>
             <th> Roomtype </th>
+            <th> Price </th>
             <th> Status</th>
             <th> Actions </th>
         </tr>
@@ -15,8 +16,11 @@
             <td> {{ room.roomtype }} </td>
             <td> {{ room.price }} </td>
             <td> {{ room.status }} </td>
+
             <td>
-                <button (click)="deleteRoom(room.roomno)" class="btn btn-danger">Delete</button>
+                <button (click)="updateRoom(room.roomno)" class="btn btn-info"> Update</button>
+                <button (click)="deleteRoom(room.roomno)" class="btn btn-danger"
+                    style="margin-left: 10px">Delete</button>
                 <button (click)="roomDetails(room.roomno)" class="btn btn-info" style="margin-left: 10px">
                     View</button>
             </td>
