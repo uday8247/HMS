@@ -7,12 +7,12 @@ import { Component, DoCheck } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements DoCheck{
+export class AppComponent implements DoCheck {
   isLoggedIn = sessionStorage.getItem('username');
-  ngDoCheck () {
+  ngDoCheck() {
     this.isLoggedIn = sessionStorage.getItem('username');
   }
-  
+
   title = 'ANGULAR-FRONTEND';
 
 }
